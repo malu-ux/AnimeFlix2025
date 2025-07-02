@@ -1,0 +1,102 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #524e4e; /* CINZA CLARO */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+h1 {
+    color: #555;
+    font-size: 2.5em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.anime-card { /* Alterado de .movie-card para .anime-card */
+    background-color: #4d4a4a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.anime-card:hover { /* Alterado de .movie-card:hover para .anime-card:hover */
+    transform: translateY(-5px);
+}
+
+.anime-card h2 { /* Alterado de .movie-card h2 para .anime-card h2 */
+    font-size: 2em; /* Tamanho dos títulos dos animes: H2 */
+    color: #242629;
+    margin-bottom: 10px;
+}
+
+.age-rating {
+    font-weight: bold;
+    color: #272523;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio para vídeos responsivos */
+    height: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.synopsis {
+    font-size: 0.95em;
+    color: #666;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .anime-card {
+        padding: 20px;
+    }
+
+    .anime-card h2 {
+        font-size: 1.8em;
+    }
+}
